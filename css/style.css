@@ -24,6 +24,7 @@
    transition: 0.5s;
  }
 
+
 .showcase.active {
   width: 90%;
   right: 200px;
