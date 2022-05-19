@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build-a-Quarium</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Build-a-Quarium</h2>
+            <div class="toggle"></div>
+        </header>
+
+        <video src="media/koifish.mp4" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Welcome to</h2>
+            <h3>Build-a-Quarium</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sit excepturi quas similique minus deserunt voluptas illum aperiam sunt odio?</p>
+            <a href="#">Start Your Build</a>
+        </div>
+        <ul class="social">
+            <li><a href="#"><img src="media/linkedinicon.svg" alt="linkedin.png" class="icon1" ></a></li>
+            <li><a href="#"><img  src="media/outlookicon.png" alt="outlook.png" class="icon2"></a></li>
+        </ul>
+
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Build</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click',() => {
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>
