@@ -6,9 +6,10 @@
 
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
    font-family: 'Poppins', sans-serif;
  }
-
+/*Index style page*/
  .showcase {
    position: absolute;
    right: 0;
@@ -47,6 +48,17 @@
    cursor: pointer;
  }
 
+ .logo a {
+  display: inline-block;
+  font-size: 1em;
+  padding: 10px 30px; 
+  text-decoration: none;
+  color: #fff;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+ }
 
 .toggle {
   position: relative;
@@ -170,7 +182,7 @@
  .menu {
    position: absolute;
    top: 0;
-   right: 0;
+   right: 20px;
    width: 200px;
    height: 100%;
    display: flex;
@@ -193,17 +205,178 @@
 .menu ul li a:hover {
   color: #03a9f4;
 }
+@media(max-width: 798px){
+  /*media for index*/
+  .showcase, .showcase header {
+    padding: 40px;
+  }
+  
+  .text h2 { 
+    font-size: 3em;
+  }
 
- @media(max-width: 798px){
-    .showcase, .showcase header {
-      padding: 40px;
-    }
-    
-    .text h2 { 
-      font-size: 3em;
-    }
+  .text h3 {
+    font-size: 2em;
+  }
+}
 
-    .text h3 {
-      font-size: 2em;
-    }
- }
+/*Contact style page*/
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-1.2.1&raw_url=true&q=60&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZmlzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto ;
+  background-color: #000;
+}
+
+
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact .content p {
+  font-weight: 300;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.container .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.container .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.container .contactInfo .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.container .contactInfo .box .text h3 {
+  font-weight: 500;
+  font-size: 3em;
+  color: #00bcd4;
+}
+
+.contactForm {
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+}
+
+.contactForm h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactForm .inputBox input, 
+.contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span, 
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px; 
+  font-size: 18px;
+}
+
+@media(max-width: 991px){
+  /*media for contact*/
+  .contact {
+    padding: 50px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+  
+  .container .contactInfo {
+    margin-bottom: 40px;
+  }
+  .container .contactInfo {
+    width: 100%; 
+  }
+
+  .container .contactForm h2 {
+    font-size: 1.5rem;
+  }
+}
