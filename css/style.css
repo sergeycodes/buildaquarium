@@ -46,6 +46,7 @@
  .logo {
    text-transform: uppercase;
    cursor: pointer;
+   
  }
 
  .logo a {
@@ -226,6 +227,7 @@
   min-height: 100vh;
   padding: 50px 100px;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -236,6 +238,48 @@
   background-color: #000;
 }
 
+.logo2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+}
+
+.logo2 a {
+ display: inline-block;
+ font-size: 1em;
+ padding: 10px 30px; 
+ text-decoration: none;
+ color: #fff;
+ margin-top: 10px;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ transition: 0.2s;
+}
+
+.toggle2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toggle2.active {
+  left: 200px;
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+  filter: invert(1);
+}
 
 .contact .content {
   max-width: 800px;
@@ -357,6 +401,33 @@
   cursor: pointer;
   padding: 10px; 
   font-size: 18px;
+}
+
+.menu2 {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu2 ul {
+  position: relative;
+  list-style: none;
+
+}
+
+.menu2 ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+
+.menu2 ul li a:hover {
+ color: #03a9f4;
 }
 
 @media(max-width: 991px){
