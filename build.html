@@ -7,21 +7,48 @@
     <title>Build</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="makeImage()">
     <section class="showcase2">
-
         <header>
             <h2 class="logo"><a href="index.html">Build-a-Quarium</a></h2>
             <div class="toggle"></div>
         </header>
-
+        
         <div class="option">
-            <h2>Choose an Aquatic Tank</h2>
+            <h2 class="choose-option">Choose an Aquatic Tank</h2>
+        
+        <div class="images">
+            
+            <button id="imageboxs" class="flex-child" onclick="addBoxTank()">
+                <h4>Aquarium box Tank</h4>
+            </button>
+            
+            <button id="imagebowls" class="flex-child" onclick="addBowlTank()">
+                <h4>Aquarium bowl Tank</h4>
+            </button>
+        </div>
         </div>
 
-        <div class="overlay"></div>
+        <div class="option2">
+            <h2 class="choose-option">Choose Your Substrate</h2>
 
+            <div class="image">
+                <button id="imagesand" class="flex-child" onclick="addSand()">
+                    <h4>Sand Substrate</h4>
+                </button>
+                
+                <button id="imagerocks" class="flex-child" onclick="addRock()">
+                    <h4>Rock Substrate</h4>
+                </button>
+            </div>
+
+
+        </div>
+                  
+        <div class="overlay"></div>
     </section>
+
+    
 
     <div class="menu">
         <ul>
@@ -42,5 +69,7 @@
             contact.classList.toggle('active')
         })
     </script>
+
+    <script src="index.js"></script>
 </body>
 </html>
