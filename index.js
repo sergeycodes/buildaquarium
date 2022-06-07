@@ -1,4 +1,4 @@
-var images = ["./media/boxtank.jpg", "./media/bowltank.jpg", "./media/rocksubstrate.jpg" , "./media/sandsubstrate.jpg", "./media/driftwood.jpg", "./media/lavarock.jpeg" ]
+var images = ["./boxtank.jpg", "./bowltank.jpg", "./rocksubstrate.jpg" , "./sandsubstrate.jpg", "./driftwood.jpg", "./lavarock.jpeg" ]
 var userData = {
     TankImage: 0,
     tank: "",
@@ -102,25 +102,25 @@ let title = document.getElementById("choose-option")
 
  function displayInfo() {
     if(userData.TankImage === 0){
-        document.getElementById("tank-img").src = "media/boxtank.jpg"
+        document.getElementById("tank-img").src = "boxtank.jpg"
         document.getElementById("tank-name").innerText = "Aquarium Box Tank"
         document.getElementById("tank-info").innerText = "The Aquatic Box Tank is an excellent tank to start your aquascaping build, to purchase one "  
         document.getElementById("tank-info").innerHTML += '<a href"https://waterboxaquariums.com/">visit this site</a>'
     }else{
-        document.getElementById("tank-img").src = "media/bowltank.jpg"
+        document.getElementById("tank-img").src = "bowltank.jpg"
         document.getElementById("tank-name").innerText = "Aquarium Bowl Tank"
         document.getElementById("tank-info").innerText = "The Aquatic Bowl Tank is an excellent tank for a desk, to purchase one "  
         document.getElementById("tank-info").innerHTML += '<a href"https://waterboxaquariums.com/">visit this site</a>'
     }
-
+ 
     if(userData.SubstrateImage === 0){
-        document.getElementById("substrate-img").src = "media/rocksubstrate.jpg"
+        document.getElementById("substrate-img").src = "rocksubstrate.jpg"
         document.getElementById("substrate-name").innerText = "Rock Substrate"
         document.getElementById("substrate-info").innerText = "Rock substrate is a great substrate to add on to a tank adding color and texture to the tank, to puschase "  
         document.getElementById("substrate-info").innerHTML += '<a href"https://waterboxaquariums.com/">visit this site</a>'
 
     }else{
-        document.getElementById("substrate-img").src = "media/sandsubstrate.jpg"
+        document.getElementById("substrate-img").src = "sandsubstrate.jpg"
         document.getElementById("substrate-name").innerText = "Sand Substrate"
         document.getElementById("substrate-info").innerText = "Sand is very fine substrate which will collect beneficial bacteria in it for plants and fish; maintenance is high but worth it, purchase it by  "  
         document.getElementById("substrate-info").innerHTML += '<a href"https://waterboxaquariums.com/">visiting this site</a>'
@@ -128,13 +128,13 @@ let title = document.getElementById("choose-option")
     }
 
     if(userData.DecorImage === 0){
-        document.getElementById("decor-img").src = "media/driftwood.jpg"
+        document.getElementById("decor-img").src = "driftwood.jpg"
         document.getElementById("decor-name").innerText = "Driftwood Decor"
         document.getElementById("decor-info").innerText = "Driftwood is a decor used by professionals to make the fish and plants stand out in their tanks, to purchase some "  
         document.getElementById("decor-info").innerHTML += '<a href"https://waterboxaquariums.com/">visit this site</a>'
 
     }else{
-        document.getElementById("decor-img").src = "media/lavarock.jpeg"
+        document.getElementById("decor-img").src = "lavarock.jpeg"
         document.getElementById("decor-name").innerText = "Lava Rock Decor"
         document.getElementById("decor-info").innerText = "Lava Rock is one of the most common decor in an aquatic tank, adding beautiful color and texture you can never go wrong purchasing it by "  
         document.getElementById("decor-info").innerHTML += '<a href"https://waterboxaquariums.com/">visiting this site</a>'
