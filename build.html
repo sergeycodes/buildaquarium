@@ -17,32 +17,67 @@
         <div class="option">
             <h2 class="choose-option">Choose an Aquatic Tank</h2>
         
-        <div class="images">
+            <div class="images">
             
-            <button id="imageboxs" class="flex-child" onclick="addBoxTank()">
-                <h4>Aquarium box Tank</h4>
-            </button>
+                <button id="imageboxs" class="flex-child" onclick="addBoxTank()">
+                    <h4>Aquarium box Tank</h4>
+                </button>
             
-            <button id="imagebowls" class="flex-child" onclick="addBowlTank()">
-                <h4>Aquarium bowl Tank</h4>
-            </button>
-        </div>
+                <button id="imagebowls" class="flex-child" onclick="addBowlTank()">
+                    <h4>Aquarium bowl Tank</h4>
+                </button>
+            </div>
         </div>
 
         <div class="option2">
             <h2 class="choose-option">Choose Your Substrate</h2>
 
-            <div class="image">
+            <div class="images">
                 <button id="imagesand" class="flex-child" onclick="addSand()">
                     <h4>Sand Substrate</h4>
                 </button>
                 
-                <button id="imagerocks" class="flex-child" onclick="addRock()">
+                <button id="imagerocks" class="flex-child" onclick="addRocks()">
                     <h4>Rock Substrate</h4>
                 </button>
             </div>
+        </div>
 
+        <div class="option3">
+            <h2 class="choose-option">Choose Your Decor</h2>
+    
+            <div class="images">
+                <button id="driftwood" class="flex-child" onclick="addDriftwood()">
+                    <h4>Driftwood</h4>
+                </button>
+                    
+                <button id="lavarock" class="flex-child" onclick="addLavaRock()">
+                    <h4>Lava Rock</h4>
+                </button>
+            </div>
+        </div>
 
+        <div class="info">
+            <h2 class="choose-option">Your Build</h2>
+            <table class="selection">
+                <tr>
+                    <th><img src="" alt="" id="tank-img"></th>
+                    <td><h2 id="tank-name"></h2></td>
+                    <th><h3 id="tank-info"></h3></th>
+                </tr>
+                
+                <tr>
+                    <th><img src="" alt="" id="substrate-img"></th>
+                    <td><h2 id="substrate-name"></h2></td>
+                    <th><h3 id="substrate-info"></h3></th>
+                </tr>
+                <tr>
+                    <th><img src="" alt="" id="decor-img"></th>
+                    <td><h2 id="decor-name"></h2></td>
+                    <th><h3 id="decor-info"></h3></th>
+                </tr>
+            </table>
+        
         </div>
                   
         <div class="overlay"></div>
@@ -52,21 +87,21 @@
 
     <div class="menu">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Build</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" class="active-page">Build</a></li>
             <li><a href="#">Explore</a></li>
             <li><a href="#">Shop</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
     
     <script>
         const menuToggle = document.querySelector('.toggle')
-        const contact = document.querySelector('.contact')
+        const showcase2 = document.querySelector('.showcase2')
 
         menuToggle.addEventListener('click',() => {
             menuToggle.classList.toggle('active')
-            contact.classList.toggle('active')
+            showcase2.classList.toggle('active')
         })
     </script>
 

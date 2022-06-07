@@ -11,59 +11,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/46fe85fc71.js" crossorigin="anonymous"></script>
+    <link rel="icon"  class="fa-duotone fa-dolphin">
 </head>
 
 <body>
-    <section class="contact">
+    <section class="showcase3">
         <header>
-            <h2 class="logo2"><a href="index.html">Build-a-Quarium</a></h2>
-            <div class="toggle2"></div>
+            <h2 class="logo"><a href="index.html">Build-a-Quarium</a></h2>
+            <div class="toggle"></div>
         </header>
 
         <div class="overlay"></div>
 
-        <div class="content">
-            <h2>Contact</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptate aliquid rerum veniam harum explicabo ipsa dolorum accusantium cumque velit?
-            </p>
-        </div>
-        <div class="container">
-            <div class="contactInfo">
-                <div class="box">
-                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-                    <div class="text">
-                        <h3>Email</h3>
-                        <p>buildaquarium@gmail.com</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                    <div class="text">
-                        <h3>Instagram</h3>
-                        <p>BuildAQuarium</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="icon"><i class="fa fa-github" aria-hidden="true"></i></div>
-                    <div class="text">
-                        <h3>GitHub</h3>
-                        <p>github.com/sergeycodes</p>
-                    </div>
-                </div>
+            <div class="content">
+                <h2>Contact</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptate aliquid rerum veniam harum explicabo ipsa dolorum accusantium cumque velit?
+                </p>
             </div>
+        
+            
             <div class="contactForm">
-                <form action="">
+                <form onsubmit="sendEmail(); reset(); return false;">
                     <h2>Send Message</h2>
                     <div class="inputBox">
-                        <input type="text" name ="" required="required">
+                        <input type="text" name ="" required="required" id="name">
                         <span>Full Name</span>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name ="" required="required">
+                        <input type="text" name ="" required="required" id="email">
                         <span>Email</span>
                     </div>
                     <div class="inputBox">
-                        <textarea name="" id="" cols="30" rows="3" required></textarea>
+                        <textarea name="" id="message" cols="30" rows="3" required></textarea>
                         <span>Type Your Message...</span>
                     </div>
                     <div class="inputBox">
@@ -71,27 +51,53 @@
                     </div>
                 </form>
             </div>
-        </div>
+        
+            <ul class="social">
+                <li><a href=""><i class="fa fa-linkedin-square fa-5x" aria-hidden="true" id="icon5"></i></a></li>
+                <li><a href="#"><i class="fa fa-github fa-5x" aria-hidden="true" id="icon3"></i></a></li>
+                <li><a href="#"><i class="fa fa-envelope fa-5x" aria-hidden="true" id="icon4"></i></a></li>
+            </ul>
     </section>
 
-    <div class="menu2">
+    <div class="menu">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Build</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="build.html">Build</a></li>
             <li><a href="#">Explore</a></li>
             <li><a href="#">Shop</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.html" class="active-page">Contact</a></li>
         </ul>
     </div>
 
     <script>
-        const menu2Toggle2 = document.querySelector('.toggle2')
-        const showcase = document.querySelector('.showcase')
+        const menuToggle = document.querySelector('.toggle')
+        const showcase3 = document.querySelector('.showcase3')
 
-        menu2Toggle2.addEventListener('click',() => {
-            menu2Toggle2.classList.toggle('active')
-            showcase.classList.toggle('active')
+        menuToggle.addEventListener('click',() => {
+            menuToggle.classList.toggle('active')
+            showcase3.classList.toggle('active')
         })
     </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function sendEmail() {
+            Email.send({
+            Host : "smtp-mail.outlook.com",
+            Username : "buildaquarium@outlook.com",
+            Password : "NanaBoba123",
+            To : 'buildaquarium@outlook.com',
+            From : document.getElementById("email").value,
+            Subject : "Contact Form New Message",
+            Body : "Name: " + document.getElementById("name").value 
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Message: " + document.getElementById("message").value
+        }).then(
+        message => alert("Your message sent successfully")
+        );
+        }
+    </script>
+
 </body>
 </html>
